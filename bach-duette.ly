@@ -48,3 +48,43 @@ menuettI = {
     \tempo 4=80
   }
 }
+
+menuettII = {
+  \key g \minor
+  \numericTimeSignature
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettII
+      \repeat volta 2 {
+        bes'4 a g | a d, d | g g,8 a bes c | d2. | es4 f8 es d c | d4 es8 d c bes | c4 d8 c bes c |
+        a2. bes'4 a g | a d, d | g g,8 a bes c d2. | f4  g8 f es d | es4 f8 es d c | d4 g c, | << bes2. d,2. >>
+      }
+      \repeat volta 2 {
+        d'4 bes8 c d e | f4 g a bes g8 a bes g | a4 g8 a f4 | f,8 g a bes c d | es4 d c | f bes, a | bes2. |
+        g4 d'8 c d4 | g,4  es'8 d es4 | g,8 d' fis, c' g bes | a2. | d,8 e fis g a bes | c4 bes a |
+        bes8 c16 d g,4 fis | << g2. bes,2. >>
+      }
+    }
+    \new Staff {
+      \menuettII
+      \repeat volta 2 {
+        g'2. f es | d4 d'8 c bes a | << g2 bes2 >> a4 | bes2 g4 | a4 fis g | d4 d8 c bes a |
+        g2 g'4 | f2. es | d4 d'8 c b a | b2 g4 | c4  a f | bes es, << f a >> | bes bes,2
+      }
+      \repeat volta 2 {
+        bes'2. | a4 g f | g4 e c | f2 r4 | a4 g f | g f es | d es f | bes, d c |
+        << d2. b2. >> | c2. | bes4 a g | d'4 a'8 g fis e | d2 r4 | es d c | bes c d | << d2. g,2. >>
+      }
+    }
+  >>
+  \header { piece = "2. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=80
+  }
+}
