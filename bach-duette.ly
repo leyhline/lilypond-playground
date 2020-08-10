@@ -88,3 +88,38 @@ menuettII = {
     \tempo 4=80
   }
 }
+
+polonaiseIII = {
+  \key g \minor
+  \numericTimeSignature
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \polonaiseIII
+      g8. a16 bes4 c | a8 a16 bes c2 | bes8 bes16 c d8 g c, g' | bes,8 a16 bes g2
+      \repeat volta 2 {
+        bes8. c16 d4 f | d8  c16 bes16 a bes c a f4 | f'8 d bes f' g16 f es d | es8 c a es' f16 es d c |
+        d8 c16 d es8 d c bes | a16 bes c a bes4 bes, | d'4 es g, | fis8 fis16 g a8 d, fis a |
+        d4 es g, | fis8 fis16 g a8 d, fis a | d8 d16 es d8 d16 es d8 g | bes,8 a16 bes g4 g,
+      }
+    }
+    \new Staff {
+      \polonaiseIII
+      g'4 g g | g fis8 e fis d | g4 g, c | d g8 g, bes d
+      \repeat volta 2 {
+        g8. a16 bes4  a | bes4 f f8 es | d4 g es | c f d |
+        bes g' es | f8 es d es d bes | bes4 c es | d d c |
+        bes c es | d2 c4 | bes g bes | d g,2
+      }
+    }
+  >>
+  \header { piece = "3. Polonaise" }
+  \layout { }
+  \midi {
+    \tempo 4=80
+  }
+}
