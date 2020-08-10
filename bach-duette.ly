@@ -34,7 +34,7 @@ menuettI = {
       \menuettI
       \repeat volta 2 {
         b,2 a4 | b2. c b a g | d'4 b g | d'4( d8) c b a |
-        b2 a4 | g4 b g | c2. | b4 c8 b a g | a2 fis'4 | g2 b,4 | c4 d e | g,2.
+        b2 a4 | g4 b g | c2. | b4 c8 b a g | a2 fis'4 | g2 b,4 | c4 d d | g,2.
       }
       \repeat volta 2 {
         g'2. fis | e4 g e | a2 a,4 | a'2. | b4 d cis | d4 fis, a | d,4 d c | b d b | c e c | b a g | d'2 r4 |
@@ -67,7 +67,7 @@ menuettII = {
       \repeat volta 2 {
         d'4 bes8 c d e | f4 g a bes g8 a bes g | a4 g8 a f4 | f,8 g a bes c d | es4 d c | f bes, a | bes2. |
         g4 d'8 c d4 | g,4  es'8 d es4 | g,8 d' fis, c' g bes | a2. | d,8 e fis g a bes | c4 bes a |
-        bes8 c16 d g,4 fis | << g2. bes,2. >>
+        bes8 c16( d ) g,4 fis | << g2. bes,2. >>
       }
     }
     \new Staff {
