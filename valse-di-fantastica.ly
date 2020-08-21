@@ -60,7 +60,15 @@ violin = {
         r f''8\downbow\< g a ais | bes4.\ff a8 bes4 | g a bes | d2 c4 |
         bes8( a ) bes2 | es,2 a4 | f4. g8( f d ) | es4. bes8 es( a ) | f4 f8\downbow g a ais | bes4.\downbow a8 bes4 | g4 a bes |
         d2 es4 | bes8( a ) bes2 | r4 es,4\upbow a | f4. g8( f d ) | es4. d8 es( bes') | a4. g8( f d) |
-        r2 bes,8\f d | g2.
+        r2 bes,8\f d | g2. |
+        a'4:8 g:8 f:8( f2:8 ) es4:8 d2.:8( d4:8 ) bes2:8 | < f a >2 a'4:8\downbow | d,4:8 f:8 a:8 | < g, bes >2 r4 |
+        <d' g>2. | f4:8 g:8 a:8( a2:8) g8:16 f:16 | g2.( g2 ) f8:16 es:16 | f2:8 es8:16 d:16 | es4 g f | g2.\>( g2. ) |
+        r4\mp g, g | r c c | r d d | r c c | r bes bes | r c c | r d d | r a a | r g g | r c c | r d d | r c c |
+        r bes bes | r c c
+      }
+      \alternative {
+        { r <d g> q | r <d g>8 q q4 | r <d g>4 q | r <d g>8 q q4 }
+        { \time 5/4 r2. g2->\sfz \bar "|." }
       }
     }
   >>
