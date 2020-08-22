@@ -14,6 +14,7 @@ menuettI = {
   \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
 }
 
 \score {
@@ -45,7 +46,7 @@ menuettI = {
   \header { piece = "1. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=80
+    \tempo 4=120
   }
 }
 
@@ -54,6 +55,7 @@ menuettII = {
   \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
 }
 
 \score {
@@ -62,30 +64,30 @@ menuettII = {
       \menuettII
       \repeat volta 2 {
         bes'4 a g | a d, d | g g,8 a bes c | d2. | es4 f8 es d c | d4 es8 d c bes | c4 d8 c bes c |
-        a2. bes'4 a g | a d, d | g g,8 a bes c d2. | f4  g8 f es d | es4 f8 es d c | d4 g c, | << bes2. d,2. >>
+        a2. bes'4 a g | a d, d | g g,8 a bes c d2. | f4  g8 f es d | es4 f8 es d c | d4 g c, | < bes d, >2.
       }
       \repeat volta 2 {
-        d'4 bes8 c d e | f4 g a bes g8 a bes g | a4 g8 a f4 | f,8 g a bes c d | es4 d c | f bes, a | bes2. |
+        d4 bes8 c d e | f4 g a bes g8 a bes g | a4 g8 a f4 | f,8 g a bes c d | es4 d c | f bes, a | bes2. |
         g4 d'8 c d4 | g,4  es'8 d es4 | g,8 d' fis, c' g bes | a2. | d,8 e fis g a bes | c4 bes a |
-        bes8 c16( d ) g,4 fis | << g2. bes,2. >>
+        bes8 c16( d ) g,4 fis | <g bes,>2.
       }
     }
     \new Staff {
       \menuettII
       \repeat volta 2 {
-        g'2. f es | d4 d'8 c bes a | << g2 bes2 >> a4 | bes2 g4 | a4 fis g | d4 d8 c bes a |
-        g2 g'4 | f2. es | d4 d'8 c b a | b2 g4 | c4  a f | bes es, << f a >> | bes bes,2
+        g2. f es | d4 d'8 c bes a | <g bes>2 a4 | bes2 g4 | a4 fis g | d4 d8 c bes a |
+        g2 g'4 | f2. es | d4 d'8 c b a | b2 g4 | c4  a f | bes es, <f a> | bes bes,2
       }
       \repeat volta 2 {
         bes'2. | a4 g f | g4 e c | f2 r4 | a4 g f | g f es | d es f | bes, d c |
-        << d2. b2. >> | c2. | bes4 a g | d'4 a'8 g fis e | d2 r4 | es d c | bes c d | << d2. g,2. >>
+        <d b>2. | c2. | bes4 a g | d'4 a'8 g fis e | d2 r4 | es d c | bes c d | <d g,>2.
       }
     }
   >>
   \header { piece = "2. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=80
+    \tempo 4=120
   }
 }
 
@@ -94,6 +96,7 @@ polonaiseIII = {
   \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
 }
 
 \score {
@@ -120,6 +123,55 @@ polonaiseIII = {
   \header { piece = "3. Polonaise" }
   \layout { }
   \midi {
-    \tempo 4=80
+    \tempo 4=120
+  }
+}
+
+musetteIV = {
+  \key d \major
+  \numericTimeSignature
+  \time 4/4
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \musetteIV
+      \repeat volta 2 {
+        \partial 2 fis4-.\upbow\p( fis-. ) | fis4.\trill( e16 fis)g4( fis) | e2 e4-.( e-.) | e4.\trill( d16 e)fis8( d e cis) |
+        d4( a) fis'-.( fis) | fis4.\trill( e16 fis) g4( fis) | e4 b'8(a g fis e d) | cis(b a b) cis( d e cis)
+      }
+      \alternative {
+       { d2 }
+       { d2 }
+      }
+      \repeat volta 2 {
+        a'4-.( a-.)
+      }
+%       \alternative {
+%        { d2 }
+%        { d2 \bar "|." }
+%       }
+    }
+    \new Staff {
+      \musetteIV
+      \repeat volta 2 {
+        \partial 2 a,8 d, fis a | d8 d, c' d, b' d, a' d, | g d fis d g d e g | a d, b' d, a' d, g d |
+        fis d fis g a d, fis a | d d, c' d, b' d, a' d, | g d fis d e d fis d | g d fis d e d g d
+      }
+      \alternative {
+        { fis d fis g }
+        { fis d e d }
+      }
+      \repeat volta 2 {
+        fis d fis a
+      }
+    }
+  >>
+  \header { piece = "4. Musette" }
+  \layout { }
+  \midi {
+    \tempo 4=120
   }
 }
