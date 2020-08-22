@@ -54,7 +54,7 @@ violin = {
         r4 a8\downbow\< bes c cis | d4.\f c8 d4 | bes4 c d | f2 es4 | d8( c ) d2\upbow |
         g,2 c4 | a4. bes8( a f ) | g4. d8 g( c ) | a4 a8\< bes c cis | d4.\f\downbow c8 d4 | bes4 c d | f2 g4 |
         d8( c ) d2 | es4. bes8( es bes') | a4. g8( f d) | es2.-> | r2. |
-        f8\mp c f es d c | bes g es' d bes g | r c f e d c | bes f es' d c bes | a bes g a bes a | r4. c8 a bes | c f es d c d |
+        f8\mp c f es d c | bes g es' d bes g | r c f es d c | bes f es' d c bes | a bes g a bes a | r4. c8 a bes | c f es d c d |
         bes' c bes a g f | es f es d c d | bes' c bes a g a | c, d c bes a bes | es d  c bes a bes |
         g a c4 r | es8 bes es bes es bes | d a d, a r4 |
         r f''8\downbow\< g a ais | bes4.\ff a8 bes4 | g a bes | d2 c4 |
