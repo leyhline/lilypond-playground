@@ -140,32 +140,42 @@ musetteIV = {
       \musetteIV
       \repeat volta 2 {
         \partial 2 fis4-.\upbow\p( fis-. ) | fis4.\trill( e16 fis)g4( fis) | e2 e4-.( e-.) | e4.\trill( d16 e)fis8( d e cis) |
-        d4( a) fis'-.( fis) | fis4.\trill( e16 fis) g4( fis) | e4 b'8(a g fis e d) | cis(b a b) cis( d e cis)
+        d4( a) fis'-.( fis) | fis4.\trill( e16 fis) g4( fis) | e4 b'8(a g fis e d) | cis(b a b) cis( d e cis) |
       }
       \alternative {
-       { d2 }
-       { d2 }
+       { \partial 2 d2 }
+       { \partial 2 d2 }
       }
       \repeat volta 2 {
-        a'4-.( a-.)
+        \partial 2 a'4-.( a-.) a4.\trill( g16 a) b8( a g fis) | g4( d) g-.( a-.) | b8( c b a) g( fis e d) | g2 e4-.( e-.) |
+        e4.( fis8) g8( a g fis) | e( d cis d) e( fis g b) | a( g fis e) fis16( a fis a fis a fis a) |
+        e2 fis4-.( fis-.) | fis4.\trill( e16 fis) g4-.( fis-.) | e2 e4-. e-. | e4.\trill( d16 e) fis8( d e cis d) a( d e fis4-. fis-.) |
+        fis4.\trill( e16 fis) g8( fis e d) | b'( a gis fis) gis( a b gis) | a( fis e d) cis( b cis a) |
       }
-%       \alternative {
-%        { d2 }
-%        { d2 \bar "|." }
-%       }
+      \alternative {
+        { d2 }
+        { d2 \bar "|." }
+      }
     }
     \new Staff {
       \musetteIV
       \repeat volta 2 {
-        \partial 2 a,8 d, fis a | d8 d, c' d, b' d, a' d, | g d fis d g d e g | a d, b' d, a' d, g d |
-        fis d fis g a d, fis a | d d, c' d, b' d, a' d, | g d fis d e d fis d | g d fis d e d g d
+        \partial 2 a8 d, fis a | d8 d, c' d, b' d, a' d, | g d fis d g d e g | a d, b' d, a' d, g d |
+        fis d fis g a d, fis a | d d, c' d, b' d, a' d, | g d fis d e d fis d | g d fis d e d g d |
       }
       \alternative {
-        { fis d fis g }
-        { fis d e d }
+        { \partial 2 fis d fis g }
+        { \partial 2 fis d e d }
       }
       \repeat volta 2 {
-        fis d fis a
+        \partial 2 fis d fis a | d a fis d g d a' d, |  b' d, c' d, b' d, a' d, | g d a' d, b' d, c' d, | b' d, a' d, g d fis d |
+        g8 d a' d, b' d, a' d, | g d b' d, a' d, g d | fis d g d a' d, b' d, | cis' d, g cis d a d, a' | d d, c' d, b' d, a' d, |
+        g d fis d g d e g | cis d, b' d, a' d, g d | fis d fis g a d, fis a | d d, a' d, b' d, fis d |
+        gis d a' d, b' d, d' d, | cis' d, b' d, a' d, g d |
+      }
+      \alternative {
+        { \partial 2 fis8 d e d }
+        { \partial 2 < d fis >2 \bar "|." }
       }
     }
   >>
