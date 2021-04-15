@@ -185,3 +185,33 @@ musetteIV = {
     \tempo 4=120
   }
 }
+
+menuettV = {
+  \key g \major
+  \numericTimeSignature
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettV
+      \repeat volta 2 {
+        g8 b d g a, fis' |
+      }
+    }
+    \new Staff {
+      \menuettV
+      \repeat volta 2 {
+        g2, d4 |
+      }
+    }
+  >>
+  \header { piece = "5. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=120
+  }
+}
