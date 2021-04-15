@@ -149,7 +149,7 @@ musetteIV = {
       \repeat volta 2 {
         \partial 2 a'4-.( a-.) a4.\trill( g16 a) b8( a g fis) | g4( d) g-.( a-.) | b8( c b a) g( fis e d) | g2 e4-.( e-.) |
         e4.( fis8) g8( a g fis) | e( d cis d) e( fis g b) | a( g fis e) fis16( a fis a fis a fis a) |
-        e2 fis4-.( fis-.) | fis4.\trill( e16 fis) g4-.( fis-.) | e2 e4-. e-. | e4.\trill( d16 e) fis8( d e cis d) a( d e fis4-. fis-.) |
+        e2 fis4-.( fis-.) | fis4.\trill( e16 fis) g4-.( fis-.) | e2 \breathe e4-. e-. | e4.\trill( d16 e) fis8( d e cis d) \breathe a( d e fis4-. fis-.) |
         fis4.\trill( e16 fis) g8( fis e d) | b'( a gis fis) gis( a b gis) | a( fis e d) cis( b cis a) |
       }
       \alternative {
