@@ -8,7 +8,7 @@
 \paper {
   #(set-paper-size "a4")
 }
-
+%{
 menuettI = {
   \key g \major
   \numericTimeSignature
@@ -227,6 +227,83 @@ menuettV = {
     }
   >>
   \header { piece = "5. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=120
+  }
+}
+
+marschVI = {
+  \key d \major
+  \numericTimeSignature
+  \time 4/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \marschVI
+      \repeat volta 2 {
+        \partial 4 a4\upbow | d4 a2 b8 cis | d4 a2 b8 cis | d8 e fis g a g fis e | fis4 d2 fis8 e |
+        fis4 d2 b8 a | b8 gis e'4( e8 d) cis b | a4. d8 \acciaccatura cis b4.\trill a8 | a4 e8 a cis a cis e | a2.
+      }
+      \repeat volta 2 {
+        \partial 4 e4 | a4 e2 fis8 gis | a4 e2 fis8 gis | a4 g8 fis e fis g e | fis4 d( d8) a b c |
+        b8 d e fis g b, cis d | cis e fis g a cis, d e | d g b a g fis e d | cis4 a2 d8 a |
+        b8 a g fis g b e b | cis a b cis d e fis g | a4 d, fis8 e d cis | d4 a8 d-1 fis d fis a |
+        d2. \grace \parenthesize d,2.
+      }
+    }
+    \new Staff {
+      \marschVI
+      \repeat volta 2 {
+        r4 | d,4 g fis e | d g fis e | fis d cis a | d4 d8 cis d4 d' |
+        d4 d,8 cis d4 d | d d8 cis d4 d | cis4 fis b, e | a,4 a8 a a a a a | a4 e' a
+      }
+      \repeat volta 2 {
+        r4 | a4 d cis b | a d cis b | a b cis a | d4 d,8 e fis4 d |
+        g4 r r gis | a r r ais | b g e g | a8 a, a' g fis e fis d |
+        g4 r r g | a r r g | fis b g a | d,4 d8 d d d d d | d4 a d
+      }
+    }
+  >>
+  \header { piece = "6. Marsch" }
+  \layout { }
+  \midi {
+    \tempo 4=120
+  }
+}
+%}
+menuettVII = {
+  \key g \minor
+  \numericTimeSignature
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettVII
+      \repeat volta 2 {
+        bes4 a g | fis2 g4( g) fis8 e fis d | g4 d g,-. | bes''4 a g | fis2 g4 | c,4 d8( c) bes a | g2. |
+      }
+      g'4 f es | d c bes | a bes c | bes4 a8( g) f es | d4 r r | d' r r | es4 d8( c) bes a | bes2. |
+      bes4 a g | fis2  g4( g) fis8( e) fis d | g4 d g,-. | bes'' a g | fis2 g4 | c,4 d8( c) bes a | g2. |
+    }
+    \new Staff {
+      \menuettVII
+      \repeat volta 2 {
+        g,4 a bes | a4 d g, | a d c | bes8 a bes c bes4 | g'4 a bes | a d g, | a4 bes8( a) g fis | g2 g,4 |
+      }
+      bes4 bes bes | bes bes bes | c d es | d2. | f4  es8( d) c bes | f'4 es8( d) c bes | g'4 f8( es) d c | bes2. |
+      g4 a bes | a d g, | a d c | bes8( a) bes c bes4 | g'4 a bes | a d g, | a4 bes8( a) g fis | g2 g,4 |
+    }
+  >>
+  \header { piece = "7. Menuett" }
   \layout { }
   \midi {
     \tempo 4=120
