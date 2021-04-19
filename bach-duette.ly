@@ -46,7 +46,7 @@ menuettI = {
   \header { piece = "1. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
 
@@ -87,7 +87,7 @@ menuettII = {
   \header { piece = "2. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
 
@@ -123,7 +123,7 @@ polonaiseIII = {
   \header { piece = "3. Polonaise" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
 
@@ -182,7 +182,7 @@ musetteIV = {
   \header { piece = "4. Musette" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
 
@@ -229,7 +229,7 @@ menuettV = {
   \header { piece = "5. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
 
@@ -272,10 +272,10 @@ marschVI = {
   \header { piece = "6. Marsch" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
   }
 }
-%}
+
 menuettVII = {
   \key g \minor
   \numericTimeSignature
@@ -306,6 +306,56 @@ menuettVII = {
   \header { piece = "7. Menuett" }
   \layout { }
   \midi {
-    \tempo 4=120
+    \tempo 4=100
+  }
+}
+%}
+menuettVIII = {
+  \key c \major
+  \numericTimeSignature
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettVIII
+      \repeat volta 2 {
+        \partial 4 e,4-.\upbow | a8.( b16) c4-. b-. | c4-. a-. e'-4( e) e8 d c b | c4-. a-. f'( f) e-. dis-. |
+        e4-. b-. e( e) d cis | d a d( d) c b | c g c | b8 c d b f'-4 a, | gis2
+      }
+      \repeat volta 2 {
+        g4\upbow c8.( d16-.) e4-.-4 d-. | e-. c-. g'( g)  g8 f e d | e4-. c-. a'( a) g-. fis-. |
+        g-. d-. e-. | f-. d2 | c2 e4-. | f-. fis4.\trill( e16 fis) | g4-. d-. fis-. | g-. gis4.\trill( fis16 gis) |
+        a4-. e-. a-. | f-. e-. d-. | e-. e,-. a-. | d-. b4.\trill( a16 b) |
+      }
+      \alternative {
+        { a2 }
+        { a2 \bar "|." }
+      }
+    }
+    \new Staff {
+      \menuettVIII
+      \repeat volta 2 {
+        \partial 4 r4 | r r e-.\upbow | a,8.-.( b16-.) c4-. b-. |  c-. a-. e'( e) e8 d c b | a4-. a'-. a-. |
+        gis-. gis-. gis-. | g-. g-. g-. | fis-. fis-. fis-. | f-. f-. f-. | e-. e-. e-. | d-. d-. d-. | e2-.
+      }
+      \repeat volta 2 {
+        r4 | r r g,\upbow | c8.( d16-.) e4-. d-. | e4-. c-. g'( g) g8 f e d | c4-. c'-. c-. |
+        b-. g-. c-. | a-. f-. g-. | c,-. c-. r | r r a'-.\upbow | bes-. b8.\trill( a32 b) c4-. | b-. e,-. b'-. |
+        c-. cis8.\trill( b32 cis) a4-. | d,-. e-. f-. | c2 f4-. | d4-. e-.( e-.)
+      }
+      \alternative {
+        { a,2 }
+        { a2 \bar "|." }
+      }
+    }
+  >>
+  \header { piece = "8. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
   }
 }
