@@ -377,15 +377,21 @@ marschIX = {
         b8 g g g' g g, g g' | g c, c g' g a, a g' | fis4 e8 d cis4.\trill d8 | d a a fis fis a a fis | d1 |
       }
       \repeat volta 2 {
+        d'8 a a a d fis, fis fis | d' d, d d d e fis g | a g a b c b c d | \acciaccatura c8 b4 a8 b g d' e fis |
+        g8 d d d g b, b b | g' g, g g g a b c | d c d e f e f g | \acciaccatura f8 e4 d8 e c b c d |
+        e c c a a fis' fis g | d b b g g fis' fis g | c,4 b8 a a4.\trill g8 | g d d a a d d a | g1 |
       }
     }
     \new Staff {
       \marschIX
       \repeat volta 2 {
-        r8 g,\upbow g g g a' b c| b g, g g g b' c a | g r g,4 b g | d' e fis d |
+        r8 g\upbow g g g a' b c| b g, g g g b' c a | g r g,4 b g | d' e fis d |
         g g,2 g'4 | e a,2 cis4 | d4 fis a a, | d8 a' a fis fis a a fis | d1 |
       }
       \repeat volta 2 {
+        d4 d d d | d8 d d d d4 e | fis4 d2 e8 fis | g4 d g d |
+        g, g g g | g8 g g g g4 a | b4 g2 a8 b | c4 g c g |
+        c2 r4 c | b2 r4 b | a4 g d' d | g,8 d' d b b d d b | g1 |
       }
     }
   >>
