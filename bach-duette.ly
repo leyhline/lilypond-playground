@@ -309,7 +309,7 @@ menuettVII = {
     \tempo 4=100
   }
 }
-%}
+
 menuettVIII = {
   \key c \major
   \numericTimeSignature
@@ -340,7 +340,7 @@ menuettVIII = {
       \menuettVIII
       \repeat volta 2 {
         \partial 4 r4 | r r e-.\upbow | a,8.-.( b16-.) c4-. b-. |  c-. a-. e'( e) e8 d c b | a4-. a'-. a-. |
-        gis-. gis-. gis-. | g-. g-. g-. | fis-. fis-. fis-. | f-. f-. f-. | e-. e-. e-. | d-. d-. d-. | e2-.
+        gis-. gis-. gis-. | g-. g-. g-. | fis-. fis-. fis-. | f-. f-. f-. | e-. e-. e-. | d-. d-. d-. | e2
       }
       \repeat volta 2 {
         r4 | r r g,\upbow | c8.( d16-.) e4-. d-. | e4-. c-. g'( g) g8 f e d | c4-. c'-. c-. |
@@ -354,6 +354,42 @@ menuettVIII = {
     }
   >>
   \header { piece = "8. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
+  }
+}
+%}
+marschIX = {
+  \key g \major
+  \numericTimeSignature
+  \time 2/2
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \marschIX
+      \repeat volta 2 {
+        d8-. g,-. g-. g-. g-. fis' g e | d g, g g g d' e c | b g b d g d g a16( b) | a8 g fis e d4 c |
+        b8 g g g' g g, g g' | g c, c g' g a, a g' | fis4 e8 d cis4.\trill d8 | d a a fis fis a a fis | d1 |
+      }
+      \repeat volta 2 {
+      }
+    }
+    \new Staff {
+      \marschIX
+      \repeat volta 2 {
+        r8 g,\upbow g g g a' b c| b g, g g g b' c a | g r g,4 b g | d' e fis d |
+        g g,2 g'4 | e a,2 cis4 | d4 fis a a, | d8 a' a fis fis a a fis | d1 |
+      }
+      \repeat volta 2 {
+      }
+    }
+  >>
+  \header { piece = "9. Marsch" }
   \layout { }
   \midi {
     \tempo 4=100
