@@ -11,7 +11,6 @@
 %{
 menuettI = {
   \key g \major
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -52,7 +51,6 @@ menuettI = {
 
 menuettII = {
   \key g \minor
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -93,7 +91,6 @@ menuettII = {
 
 polonaiseIII = {
   \key g \minor
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -129,7 +126,6 @@ polonaiseIII = {
 
 musetteIV = {
   \key d \major
-  \numericTimeSignature
   \time 4/4
   \set Staff.midiInstrument = "violin"
 }
@@ -188,7 +184,6 @@ musetteIV = {
 
 menuettV = {
   \key g \major
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -235,7 +230,6 @@ menuettV = {
 
 marschVI = {
   \key d \major
-  \numericTimeSignature
   \time 4/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -278,7 +272,6 @@ marschVI = {
 
 menuettVII = {
   \key g \minor
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -312,7 +305,6 @@ menuettVII = {
 
 menuettVIII = {
   \key c \major
-  \numericTimeSignature
   \time 3/4
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -359,10 +351,9 @@ menuettVIII = {
     \tempo 4=100
   }
 }
-%}
+
 marschIX = {
   \key g \major
-  \numericTimeSignature
   \time 2/2
   \set Score.doubleRepeatType = #":|.|:"
   \set Staff.midiInstrument = "violin"
@@ -379,7 +370,7 @@ marschIX = {
       \repeat volta 2 {
         d'8 a a a d fis, fis fis | d' d, d d d e fis g | a g a b c b c d | \acciaccatura c8 b4 a8 b g d' e fis |
         g8 d d d g b, b b | g' g, g g g a b c | d c d e f e f g | \acciaccatura f8 e4 d8 e c b c d |
-        e c c a a fis' fis g | d b b g g fis' fis g | c,4 b8 a a4.\trill g8 | g d d a a d d a | g1 |
+        e c c a a fis' fis g | d b b g g fis' fis g | c,4 b8 a a4.\trill g8 | g d d b b d d b | g1 |
       }
     }
     \new Staff {
@@ -399,5 +390,60 @@ marschIX = {
   \layout { }
   \midi {
     \tempo 4=100
+  }
+}
+%}
+polonaiseX = {
+  \key f \major
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \polonaiseX
+      \repeat volta 2 {
+        f8 f16 g \acciaccatura g8 a8 g16 a bes a g f | g8 g16 a \acciaccatura g8 f8 e16 d e8 c | \acciaccatura bes8 << a4 f >> << f d' >> << f, c' >> | bes8 c16 d \appoggiatura c16 bes8 a16 g a8 f |
+        a8 bes16 c d8 d16 e \appoggiatura d8 c4 | \acciaccatura c8 bes8 c16 d \appoggiatura c16 bes8 a16 g a8 f | f'8 f16 e d8 c bes a | g16 bes a g \appoggiatura g4 f2 |
+      }
+      \repeat volta 2 {
+        a'8 a16 g \acciaccatura g8 a8 g16 a bes a g f | g8 g16 f \acciaccatura f8 g8 f16 g a g f e | a8 a16 g f8 e d c | b16 c d b c4--( bes--) |
+        a8 c c bes16 c \acciaccatura c8 d4 | g,8 bes bes a16 bes \acciaccatura bes8 c4 | f8 f16 e d8 c bes a | g16 bes a g \appoggiatura g4 f2 |
+      }
+      \repeat volta 2 {
+        f'8 f16 g \acciaccatura g8 a g16 a bes a g f |  g8 g16 a g f e d e8 c | \acciaccatura bes8 a4 d c | bes8 c16 d c bes a g a8 f |
+        a8 bes16 c d8 d16 e d8 c | \acciaccatura c8 bes8 c16 d c bes a g a8 f | f'8 f16 e d8 c bes a | g16 bes a g g4 f |
+      }
+      \repeat volta 2 {
+        a'8 a16 g a8 g16 a bes a g f | g8 g16 f g8 f16 g a g f e | a8 a16 g f8 e d c | b16 c d b c4--( bes--) |
+        a8 c c bes16 c \acciaccatura c8 d4 | g,8 bes bes a16 bes \acciaccatura bes8 c4 | f8 f16 e d8 c bes a |  g16 bes a g g4 f |
+      }
+    }
+    \new Staff {
+      \polonaiseX
+      \repeat volta 2 {
+        << { a8 bes c4 c c4 b c } \\ { f,4 f f e d c } >> | d16 es d c bes8 bes' a-4 a, | g8 f' e c f16 c bes c |
+        f4 << {f f f g} { bes, a d e } >> f16 d f g | a8 f bes, c d bes | c c c a16 c f4 |
+      }
+      \repeat volta 2 {
+        << { c'4 c c c c c c c a } { f f f e << e c >> e f a f } >> g8 g c c, d e |
+        f8 f16 g a8 f bes bes, | c8 d c bes a g | a8 f' bes, c d bes | c c c a16 c f4
+      }
+      \repeat volta 2 {
+        f8 a c a f c' | e, c' d, b' c16 bes a g | f e d c bes f' e f a, f' e f |  g,8 f' c e f16 c d e |
+        f8 g16 a bes8 f a f | g f e c f16 g a bes | a8 f bes, c d bes |  c8 c c a16 c f4 |
+      }
+      \repeat volta 2 {
+        f8 a c a f c' | e, g c g e c |  f16 e f g a8 g f e | g8 g, c16 d e d c bes a g |
+        f'8 a, c f bes, f' | e g e c bes e | a, f' bes, c d bes | c c c a16 c f4 |
+      }
+    }
+  >>
+  \header { piece = "10. Polonaise" }
+  \layout { }
+  \midi {
+    \tempo 4=80
   }
 }
