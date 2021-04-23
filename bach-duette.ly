@@ -392,7 +392,7 @@ marschIX = {
     \tempo 4=100
   }
 }
-%}
+
 polonaiseX = {
   \key f \major
   \time 3/4
@@ -445,5 +445,41 @@ polonaiseX = {
   \layout { }
   \midi {
     \tempo 4=80
+  }
+}
+%}
+menuettXI = {
+  \key f \major
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettXI
+      \repeat volta 2 {
+        c4-1 d16( e f8) e4 | \tuplet 3/2 { f8( e d) } \acciaccatura d c2 | \tuplet 3/2 { d8-3( es d) } \tuplet 3/2 { c( d c) } \tuplet 3/2 { bes( c bes) } | \acciaccatura bes a2 g4 | a8 c f, c' g c |
+        a8 c bes c g c | a c f, c' g c | a c bes c g c | a c d e f d |  c b a g c16( d c b) | c8--( f--) e4 d16( c d8) | c2. |
+      }
+      \repeat volta 2 {
+        
+      }
+    }
+    \new Staff {
+      \menuettXI
+      \repeat volta 2 {
+        f,4 a g | a f8 g a f | bes4 c c, | f c8 d e c | f4 a, g |
+        f' g e | f a, g | f' g e | f f d | g e a | f g g, | c2. |
+      }
+      \repeat volta 2 {
+      }
+    }
+  >>
+  \header { piece = "11. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
   }
 }
