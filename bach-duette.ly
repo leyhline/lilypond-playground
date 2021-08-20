@@ -490,7 +490,7 @@ menuettXI = {
     \tempo 4=100
   }
 }
-%}
+
 menuettXII = {
   \key g \major
   \time 3/4
@@ -523,6 +523,61 @@ menuettXII = {
     }
   >>
   \header { piece = "12. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
+  }
+}
+%}
+menuettXIII = {
+  \key a \major
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettXIII
+      \repeat volta 2 {
+        a2 b4 | gis4 e b' | d b gis | e2. | cis'4 e8 d cis b | a4 cis8 b a gis | fis4 d' cis
+      }
+      \alternative {
+          { b2. }
+          { b2. }
+        }
+      \repeat volta 2 {
+        e2 fis4 | dis b fis' | a fis dis | b2. | a'2 b4 | gis e fis | b, e dis |
+        e2. | cis4 e8 d cis b | a4 cis8 b a gis | fis4 d' cis | b2. | a2 b4 | gis4 e b' |
+        d b gis | e2. | cis'4  e8 d cis b | cis4 e8 d cis b | a4 b gis |
+      }
+      \alternative {
+          { a2. }
+          { a2. \bar "|." }
+        }
+    }
+    \new Staff {
+      \menuettXIII
+      \repeat volta 2 {
+        a4 fis d | e2 b'4 | d b gis | e4. d8 cis b | a4 gis e' | fis e cis | d b a |
+      }
+      \alternative {
+        { e'4. fis8 gis e }
+        { e2. }
+      }
+      \repeat volta 2 {
+        e4 cis a | b2 fis'4 | a fis dis | b4. cis8 dis e | fis4 dis b | e cis a | gis a b |
+        e8 dis e fis gis e | a4 gis e | fis e cis | d b a | e'4. fis8 gis e | a4 fis d | e2 b'4 |
+        d b gis |  e4. d8 cis b | a4 cis e | a4 gis e | cis d e |
+      }
+      \alternative {
+        { a,8 gis a b cis d }
+        { a'4 e a, \bar "|." }
+      }
+    }
+  >>
+  \header { piece = "13. Menuett" }
   \layout { }
   \midi {
     \tempo 4=100
