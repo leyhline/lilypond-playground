@@ -447,7 +447,7 @@ polonaiseX = {
     \tempo 4=80
   }
 }
-%}
+
 menuettXI = {
   \key f \major
   \time 3/4
@@ -464,7 +464,10 @@ menuettXI = {
         a8 c bes c g c | a c f, c' g c | a c bes c g c | a c d e f d |  c b a g c16( d c b) | c8--( f--) e4 d16( c d8) | c2. |
       }
       \repeat volta 2 {
-        
+        g'4 f8 e f d | e g bes4 r | a4 g8 f e d | \acciaccatura d8 cis2. |
+        cis8 d e cis d e | a,4 a a | cis8 d e cis d e | g,4 g g | cis8 d e cis d e |
+        a,8 d c bes a g | f4 g e | d2. | c'8 f e f es f | a f d f c f |
+        d g fis g f g | bes g e g c, bes | a f' g a g f | bes, g' a bes a g | c,-1 c'-4 bes-3 a-3 g a | \acciaccatura g8 f2.
       }
     }
     \new Staff {
@@ -474,10 +477,52 @@ menuettXI = {
         f' g e | f a, g | f' g e | f f d | g e a | f g g, | c2. |
       }
       \repeat volta 2 {
+        c4 g' g, | c e8 d e c | f4 bes g | a e cis |
+        a a' e | cis8 d e cis d e | a,4 a a | cis8 d e cis d e | g,4 g g |
+        f' f g, | a2 a4 | d8 d c bes a g | a'2 g4 | f bes a |
+        bes2 a4 | g4 c e, | f r r | g r r | a bes c | f,2.
       }
     }
   >>
   \header { piece = "11. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
+  }
+}
+%}
+menuettXII = {
+  \key g \major
+  \time 3/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettXII
+      \repeat volta 2 {
+        d4 d d | d g8 fis g4 | b,4 a8( b16 c) b8 a | b4 a8 b g4 | e'4 e e | e d8( c) b a | d4 c8( b) a b | g2.
+      }
+      \repeat volta 2 {
+        a'4\downbow a a | a d,8 cis d4 | a b c | b a8 b g4 | g'4 g g | g8( fis) e d cis b | a4 d cis | d2. | g4 c, c | c e8 d c4 |
+        a'4 c, c | b8( d) c b a4 | d4 d d | d e8 fis g4 | b,8( c16 d) c8 b a b | g2.
+      }
+    }
+    \new Staff {
+      \menuettXII
+      \repeat volta 2 {
+        g,8 b d g a, fis' | b, g' g, a b c | d4 c d | g, a b | c8 b c g' e g | c,4 e fis | <<g b,>> c d | g,8 d' b d g,4
+      }
+      \repeat volta 2 {
+        d'8 fis a d e, cis' | fis, d' fis, e d e | fis a g fis e d | g,4 a b |
+        e8 fis g fis e d | cis4 a'-4 g | fis g, a | d8 a' fis a d,4 | e2 r4 | a8 e c e a, c |
+        fis2 r4 | g,8 b d g c, fis | b, d fis g a, fis' | g fis g a b c | d,4 g--( fis--) | g,8 d' b d g,4
+      }
+    }
+  >>
+  \header { piece = "12. Menuett" }
   \layout { }
   \midi {
     \tempo 4=100
