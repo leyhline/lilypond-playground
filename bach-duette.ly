@@ -1,4 +1,4 @@
-\version "2.20.0"
+\version "2.22.1"
 
 \header {
   title = "Duette für Violinen"
@@ -513,7 +513,7 @@ menuettXII = {
     \new Staff {
       \menuettXII
       \repeat volta 2 {
-        g,8 b d g a, fis' | b, g' g, a b c | d4 c d | g, a b | c8 b c g' e g | c,4 e fis | <<g b,>> c d | g,8 d' b d g,4
+        g,8 b d g a, fis' | b, g' g, a b c | d4 c d | g, a b | c8 b c g' e g | c,4 e fis | <g b,> c d | g,8 d' b d g,4
       }
       \repeat volta 2 {
         d'8 fis a d e, cis' | fis, d' fis, e d e | fis a g fis e d | g,4 a b |
@@ -528,7 +528,7 @@ menuettXII = {
     \tempo 4=100
   }
 }
-%}
+
 menuettXIII = {
   \key a \major
   \time 3/4
@@ -578,6 +578,52 @@ menuettXIII = {
     }
   >>
   \header { piece = "13. Menuett" }
+  \layout { }
+  \midi {
+    \tempo 4=100
+  }
+}
+%}
+menuettXIV = {
+  \key d \major
+  \time 4/4
+  \set Score.doubleRepeatType = #":|.|:"
+  \set Staff.midiInstrument = "violin"
+}
+
+\score {
+  \new StaffGroup \relative c'' <<
+    \new Staff {
+      \menuettXIV
+      \repeat volta 2 {
+        \partial 4 d,8 fis a4 b8 cis d a fis'4 fis8 e d cis d4 <b g> | <b g> <a fis>2 g4 | \tuplet 3/2 { fis8 e d } d2 fis'4 |
+        \tuplet 3/2 { e8( d cis) } cis cis cis( e) d( cis) | \tuplet 3/2 { d8( cis b) } <b e,> b <b( e,> d) <cis( e,> b) | \tuplet 3/2 {cis( d e)} <e a,> e <e a,> e a( cis,) | \tuplet 3/2 {b( cis d)} <d e,> d <d e,> d b'( d,) |
+        \tuplet 3/2 {cis( a' gis)} \tuplet 3/2 {fis( e d)} \tuplet 3/2 {cis( b a)} \afterGrace b4\trill( {a8 b)} | a2.
+      }
+      \repeat volta 2 {
+        \partial 4 a8 cis | e4 d8 cis b a g'4 | g\mordent fis2 fis,4 |
+        \tuplet 3/2 {d'8( cis b)} \tuplet 3/2 {e8( d cis)} \tuplet 3/2 {fis8( e d)} g b, | b4\mordent ais2 fis8 fis | ais8 fis cis' fis fis( e) e e | ais, fis cis' e e( d) d d |
+        fis b, \tuplet 3/2 {e( d cis)} \afterGrace cis2\trill( {b8 cis)} | b2. d8 cis | d a fis'2 c4 | c\mordent b2 cis4 |
+        \tuplet 3/2 {d8( e fis)} \tuplet 3/2 {g( fis e)} \tuplet 3/2 {fis( e d)} a' d, | \tuplet 3/2 {cis( b a)} a2 g4 | \tuplet 3/2 {fis8( g a)} <fis a> a <fis a> a <fis d'(> fis) | \tuplet 3/2 {e( fis g)} <g a,> g <g a,> g <g e'(> g) |
+        \tuplet 3/2 {fis( g a)} <a d,> a <a fis'(> a) g fis | \tuplet 3/2 {e( fis g)} <g a,> g <g e'(> g) fis e | \tuplet 3/2 {fis( d' cis)} \tuplet 3/2 {b( a g)} \tuplet 3/2 {fis( e d)} \afterGrace e4\trill( {d16 e)} | d2.
+      }
+    }
+    \new Staff {
+      \menuettXIV
+      \repeat volta 2 {
+        \partial 4 d4 | fis g8 e fis4 d | a a' d, g, | a2 a | d4 d8 e fis4 d |
+        cis a' a, a' | e4 gis gis gis | e <e cis'> <e cis'> <e cis'> | e <e b'> <e b'> <e b'> |
+        a4 d, e e | a e a,
+      }
+      \repeat volta 2 {
+        \partial 4 a4 | a b cis a | d d8 cis d( e) d cis | b4 cis d e | fis fis8 eis fis4 fis | fis fis fis fis | fis fis b, b |
+        d g fis fis | b b a8( g) fis e | fis4 d8 e fis4 d | g,4 g'8 fis g4 e |
+        fis4 cis d fis | a a,8 b cis4 a | d-.( d-.\upbow) d d | a cis cis a |
+        <a d> <a fis'> <a d> <a d> | a cis a a | d g, a a | b2.
+      }
+    }
+  >>
+  \header { piece = "14. Marsch" }
   \layout { }
   \midi {
     \tempo 4=100
