@@ -86,12 +86,11 @@ menuettXIV = {
 
 \book {
 
-  %{
-\header {
-  title = "Duette für Violinen"
-  composer = "J. S. Bach"
-}
-  %}
+
+  \header {
+    title = "Duette für Violinen"
+    composer = "J. S. Bach"
+  }
 
   \paper {
     #(set-paper-size "a4")
@@ -163,6 +162,8 @@ menuettXIV = {
     }
   }
 
+  \pageBreak
+
   \score {
     \new StaffGroup \relative c'' <<
       \new Staff {
@@ -190,8 +191,6 @@ menuettXIV = {
       \tempo 4=100
     }
   }
-
-  \pageBreak
 
   \score {
     \new StaffGroup \relative c'' <<
@@ -283,6 +282,8 @@ menuettXIV = {
       \tempo 4=100
     }
   }
+  
+  \pageBreak
 
   \score {
     \new StaffGroup \relative c'' <<
@@ -302,11 +303,11 @@ menuettXIV = {
       \new Staff {
         \marschVI
         \repeat volta 2 {
-          r4 | d,4 g fis e | d g fis e | fis d cis a | d4 d8 cis d4 d' |
+          \partial 4 r4 | d,4 g fis e | d g fis e | fis d cis a | d4 d8 cis d4 d' |
           d4 d,8 cis d4 d | d d8 cis d4 d | cis4 fis b, e | a,4 a8 a a a a a | a4 e' a
         }
         \repeat volta 2 {
-          r4 | a4 d cis b | a d cis b | a b cis a | d4 d,8 e fis4 d |
+          \partial 4 r4 | a4 d cis b | a d cis b | a b cis a | d4 d,8 e fis4 d |
           g4 r r gis | a r r ais | b g e g | a8 a, a' g fis e fis d |
           g4 r r g | a r r g | fis b g a | d,4 d8 d d d d d | d4 a d
         }
@@ -318,7 +319,6 @@ menuettXIV = {
       \tempo 4=100
     }
   }
-  \pageBreak
 
   \score {
     \new StaffGroup \relative c'' <<
@@ -421,7 +421,7 @@ menuettXIV = {
       \tempo 4=100
     }
   }
-
+  
   \pageBreak
 
   \score {
@@ -507,7 +507,7 @@ menuettXIV = {
       \tempo 4=100
     }
   }
-
+  
   \pageBreak
 
   \score {
